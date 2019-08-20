@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mFavorite"
+        android:icon="@drawable/ic_favorite_menu"
+        android:title="Favorite" />
+    <item
+        android:id="@+id/mRecente"
+        android:icon="@drawable/ic_share_menu"
+        android:title="Share" />
+    <item
+        android:id="@+id/mLocation"
+        android:icon="@drawable/ic_location_on"
+        android:title="Location" />
+</menu>
