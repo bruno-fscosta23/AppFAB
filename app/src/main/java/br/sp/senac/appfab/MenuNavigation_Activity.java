@@ -41,13 +41,32 @@ public class MenuNavigation_Activity extends AppCompatActivity {
 //                return true;
 //            }
 //        });
+//        bottomNavigationView = (BottomNavigationView) findViewById(R.id.idBottonNavigation);
+//
+//        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+//                startActivity(new Intent(getApplicationContext(), Share_Activity.class));
+//
+//                return true;
+//            }
+//        });
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.idBottonNavigation);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                startActivity(new Intent(getApplicationContext(), Share_Activity.class));
-
+                switch (menuItem.getItemId()) {
+                    case R.id.mFavorite:
+                        startActivity(new Intent(getApplicationContext(), Favorito_Activity.class));
+                        break;
+                    case R.id.mLocation:
+                        startActivity(new Intent(getApplicationContext(), Location_Activity.class));
+                        break;
+                    case R.id.mRecente:
+                        startActivity(new Intent(getApplicationContext(), Share_Activity.class));
+                        break;
+                }
                 return true;
             }
         });
